@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
+
+    <!-- UserEntity to UserDTO custom mappings -->
+    <mapping>
+        <class-a>com.project.taskmanagement.entity.UserEntity</class-a>
+        <class-b>com.project.taskmanagement.dto.UserDTO</class-b>
+        
+        <field>
+            <a>userId</a>
+            <b>userId</b>
+        </field>
+        <field>
+            <a>username</a>
+            <b>username</b>
+        </field>
+        <field>
+            <a>usermail</a>
+            <b>usermail</b>
+        </field>
+        <field>
+            <a>password</a>
+            <b>password</b>
+        </field>
+    </mapping>
+
+    <!-- TaskEntity to TaskDTO custom mappings -->
+    <!-- <mapping>
+        <class-a>com.project.taskmanagement.entity.TaskEntity</class-a>
+        <class-b>com.project.taskmanagement.dto.TaskDTO</class-b>
+
+        <field>
+            <a>taskId</a>
+            <b>taskId</b>
+        </field>
+        <field>
+            <a>title</a>
+            <b>title</b>
+        </field>
+        <field>
+            <a>description</a>
+            <b>description</b>
+        </field>
+        <field>
+            <a>status</a>
+            <b>status</b>
+        </field>
+        <field>
+            <a>priority</a>
+            <b>priority</b>
+        </field>
+        <field>
+            <a>dueDate</a>
+            <b>dueDate</b>
+        </field>
+        <field>
+            <a>createdDate</a>
+            <b>createdDate</b>
+        </field>
+        <field>
+            <a>completedDate</a>
+            <b>completedDate</b>
+        </field>
+    </mapping> -->
+
+    <!-- Additional mappings can be added here for other entities and DTOs -->
+
+</mappings>
