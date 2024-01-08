@@ -8,26 +8,29 @@ import com.project.taskmanagement.service.TaskService;
 
 import jakarta.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@RestController
+@CrossOrigin(origins = "http://127.0.0.1:8081")
 @RequestMapping("/api/tasks")
 public class TaskController {
 
+    @Autowired
     private TaskService taskService;
+
+    @Autowired
     private TaskConverter taskConverter;
 
-    public TaskController(TaskService taskService, TaskConverter taskConverter) {
-        this.taskService = taskService;
-        this.taskConverter = taskConverter;
-    }
+    // public TaskController(TaskService taskService, TaskConverter taskConverter) {
+    // this.taskService = taskService;
+    // this.taskConverter = taskConverter;
+    // }
 
     @PostMapping
     public ResponseEntity<TaskDTO> createTask(@RequestBody @Valid TaskDTO taskDTO) {

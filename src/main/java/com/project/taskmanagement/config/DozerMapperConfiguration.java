@@ -15,7 +15,7 @@ public class DozerMapperConfiguration {
         try {
 
             mapper = DozerBeanMapperBuilder.create().withMappingFiles(Arrays.asList(
-                    "CustomMappings.xml")).build();
+                    "com/project/taskmanagement/config/CustomMappings.xml")).build();
 
         } catch (Exception ex) {
             System.err.println("EXCEPTION : " + ex.getMessage());

@@ -4,7 +4,7 @@
           xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
 
     <!-- UserEntity to UserDTO custom mappings -->
-    <mapping>
+    <!-- <mapping>
         <class-a>com.project.taskmanagement.entity.UserEntity</class-a>
         <class-b>com.project.taskmanagement.dto.UserDTO</class-b>
         
@@ -28,10 +28,10 @@
         <field-exclude>
             <a>assignedTasks</a>
         </field-exclude>
-    </mapping>
+    </mapping> -->
 
     <!-- TaskEntity to TaskDTO custom mappings -->
-    <mapping>
+    <!-- <mapping>
         <class-a>com.project.taskmanagement.entity.TaskEntity</class-a>
         <class-b>com.project.taskmanagement.dto.TaskDTO</class-b>
 
@@ -70,7 +70,7 @@
         <field-exclude>
             <a>assignedUsers</a>
         </field-exclude>
-    </mapping>
+    </mapping> -->
 
     <!-- Additional mappings can be added here for other entities and DTOs -->
 
