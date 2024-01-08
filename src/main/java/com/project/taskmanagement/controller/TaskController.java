@@ -8,22 +8,22 @@ import com.project.taskmanagement.service.TaskService;
 
 import jakarta.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
+@Controller
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RequestMapping("/api/tasks")
 public class TaskController {
 
-    private final TaskService taskService;
-    private final TaskConverter taskConverter;
+    private TaskService taskService;
+    private TaskConverter taskConverter;
 
-    @Autowired
     public TaskController(TaskService taskService, TaskConverter taskConverter) {
         this.taskService = taskService;
         this.taskConverter = taskConverter;

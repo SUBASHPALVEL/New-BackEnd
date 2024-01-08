@@ -3,6 +3,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -46,6 +48,7 @@ public class TaskEntity {
     @Temporal(TemporalType.DATE)
     private LocalDate completedDate;
 
+    @JsonManagedReference
     @ManyToMany
     @JoinTable(name="tasks_users",
                     joinColumns = @JoinColumn(name="taskId"),

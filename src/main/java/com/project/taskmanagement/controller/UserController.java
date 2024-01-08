@@ -8,22 +8,22 @@ import com.project.taskmanagement.service.UserService;
 
 import jakarta.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
+@Controller
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RequestMapping("/api/users")
 public class UserController {
 
-    private final UserService userService;
-    private final UserConverter userConverter;
+    private UserService userService;
+    private UserConverter userConverter;
 
-    @Autowired
     public UserController(UserService userService, UserConverter userConverter) {
         this.userService = userService;
         this.userConverter = userConverter;

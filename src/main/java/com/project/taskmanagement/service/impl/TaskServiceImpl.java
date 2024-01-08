@@ -3,7 +3,6 @@ package com.project.taskmanagement.service.impl;
 import com.project.taskmanagement.entity.TaskEntity;
 import com.project.taskmanagement.exception.ResourceNotFoundException;
 import com.project.taskmanagement.repository.TaskRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.project.taskmanagement.service.TaskService;
 
@@ -15,7 +14,6 @@ public class TaskServiceImpl implements TaskService {
 
     private final TaskRepository taskRepository;
 
-    @Autowired
     public TaskServiceImpl(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }

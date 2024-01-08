@@ -24,10 +24,14 @@
             <a>password</a>
             <b>password</b>
         </field>
+
+        <field-exclude>
+            <a>assignedTasks</a>
+        </field-exclude>
     </mapping>
 
     <!-- TaskEntity to TaskDTO custom mappings -->
-    <!-- <mapping>
+    <mapping>
         <class-a>com.project.taskmanagement.entity.TaskEntity</class-a>
         <class-b>com.project.taskmanagement.dto.TaskDTO</class-b>
 
@@ -63,8 +67,22 @@
             <a>completedDate</a>
             <b>completedDate</b>
         </field>
-    </mapping> -->
+        <field-exclude>
+            <a>assignedUsers</a>
+        </field-exclude>
+    </mapping>
 
     <!-- Additional mappings can be added here for other entities and DTOs -->
 
+    <!-- Mapping between TaskDTO and UserDTO -->
+    <mapping>
+        <class-a>com.project.taskmanagement.dto.TaskDTO</class-a>
+        <class-b>com.project.taskmanagement.dto.UserDTO</class-b>
+
+        <!-- Field mapping for assignedUsers to assignedTasks -->
+        <field>
+            <a>assignedUsers</a>
+            <b>assignedTasks</b>
+        </field>
+    </mapping>
 </mappings>
